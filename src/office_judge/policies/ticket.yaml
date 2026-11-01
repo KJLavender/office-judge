@@ -1,0 +1,29 @@
+id: ticket_team
+role: routing
+kind: choice
+instructions: "這張工單應該由哪個團隊處理？"
+# criteria filled from company.yaml teams
+thresholds: { min_confidence: 0.6 }
+fallback: [human]
+fail_mode: open
+---
+id: ticket_urgency
+role: ranking
+kind: score
+instructions: "這張工單有多緊急？"
+criteria:
+  - "不急：一般詢問或可以排隊的需求"
+  - "普通：影響一個人的工作，但有替代方式"
+  - "緊急：阻礙一個人工作且沒有替代方式"
+  - "非常緊急：影響多人或整個部門，或有資安疑慮"
+---
+id: ticket_is_request
+role: extraction
+kind: noul
+instructions: "這段文字是否是員工向公司內部服務台（IT、HR、財務、總務）提出的問題、申請或報修？"
+criteria:
+  true: "例如報修、帳號或密碼問題、請假或報帳詢問、設備或門禁申請"
+  false: "閒聊、會議記錄、新聞、請 AI 幫忙翻譯或寫東西、單純分享資訊"
+# asked in the same request as team/urgency; not a ticket -> routing is skipped
+thresholds: { yes_above: 0.5, no_below: 0.5 }
+fail_mode: open

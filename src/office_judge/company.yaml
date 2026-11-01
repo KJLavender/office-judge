@@ -1,0 +1,10 @@
+# Fictional company used for every dataset and demo. No real data.
+name: 星河科技 Galaxia Tech
+teams:
+  IT: "帳號、密碼重設、電腦、網路、VPN、印表機、軟體安裝與授權、資安事件"
+  HR: "請假、薪資、勞健保、到職離職、教育訓練、員工福利"
+  Finance: "報帳、發票、採購付款、預算、廠商請款"
+  Facilities: "門禁卡、會議室、辦公設備與家具、文具、空調、停車位"
+codenames: ["北極星", "Polaris", "藍鯨計畫", "Project Bluewhale", "晨曦", "Aurora-X"]
+customers: ["宏遠銀行", "東岳航空貨運", "Northwind Retail", "青禾醫療"]
+default_attendees: ["Kevin", "怡君", "志明", "Amy", "建宏"]

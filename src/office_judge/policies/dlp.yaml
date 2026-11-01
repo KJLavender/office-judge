@@ -1,0 +1,18 @@
+id: dlp_sensitive
+role: gating
+kind: noul
+instructions: "這句話是否透露客戶資料、個人資料、帳號密碼或金鑰、或未公開的內部商業資訊？"
+# Keep instructions/criteria identical to scripts/bench_dlp.py ZH_I / ZH_C: the model
+# thresholds below were tuned on exactly this wording and do not carry over to other wording.
+criteria:
+  true: "例如未公布的營收或財測、併購或募資、未發表的產品規格與時程、客戶名單、合約或報價金額、內部系統架構與漏洞、個資、金鑰"
+  false: "公開資訊、一般工作溝通與行政事務、問候、通用技術問題"
+thresholds: { yes_above: 0.5, no_below: 0.05 }
+model_thresholds:
+  # tuned on data/out/dlp_100.jsonl, validated on data/out/dlp_val.jsonl (2026-10-30):
+  # rules -> kev-4b -> LLM missed 0 leaks, 28% of sentences went to the LLM
+  kev-4b: { yes_above: 0.5, no_below: 0.15 }
+  # Claude via the CLI: no_below 0.2 auto-passed 0 leaks on both data sets
+  "llm:": { yes_above: 0.5, no_below: 0.2 }
+fallback: [llm, human]
+fail_mode: closed

@@ -1,0 +1,18 @@
+id: is_action_item
+role: extraction
+kind: noul
+instructions: "「本句」是否指派了某人去做某件事，或某人承諾要做某件事？前文與後文只供理解，不要判斷它們。"
+criteria:
+  true: "例如「請 Kevin 下週三前把報價寄出」「我來整理會議記錄」「這個交給怡君」"
+  false: "陳述事實、討論意見、已完成的事、問候"
+# recall first: no gray zone, anything >= 0.5 is kept
+thresholds: { yes_above: 0.5, no_below: 0.5 }
+fail_mode: open
+---
+id: action_owner
+role: routing
+kind: choice
+instructions: "「本句」這件事由誰負責？"
+# criteria filled from the attendee list plus 未指定
+thresholds: { min_confidence: 0.5 }
+fail_mode: open

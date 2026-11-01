@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>office-judge</title>
+<style>
+  :root { --fg:#1f2328; --muted:#656d76; --line:#d0d7de; --bg:#f6f8fa; --ok:#1a7f37; --warn:#9a6700; --bad:#cf222e; --accent:#3b6ea5; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:15px/1.6 system-ui, "Noto Sans TC", "Microsoft JhengHei", sans-serif; color:var(--fg); background:var(--bg); }
+  header { padding:16px 24px; border-bottom:1px solid var(--line); background:#fff; display:flex; gap:16px; align-items:baseline; flex-wrap:wrap; }
+  header h1 { font-size:18px; margin:0; }
+  header .cfg { color:var(--muted); font-size:13px; }
+  main { max-width:1200px; margin:0 auto; padding:20px 24px; }
+  textarea { width:100%; min-height:170px; padding:12px; font:inherit; border:1px solid var(--line); border-radius:6px; resize:vertical; }
+  .row { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin:10px 0 20px; }
+  input[type=text] { flex:1; min-width:240px; padding:7px 10px; font:inherit; border:1px solid var(--line); border-radius:6px; }
+  button { padding:7px 14px; font:inherit; border:1px solid var(--line); border-radius:6px; background:#fff; cursor:pointer; }
+  button.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+  button:disabled { opacity:.6; cursor:wait; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(330px, 1fr)); gap:16px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px; }
+  .card h2 { font-size:15px; margin:0 0 10px; }
+  .badge { display:inline-block; padding:2px 10px; border-radius:999px; font-weight:600; font-size:13px; color:#fff; }
+  .pass { background:var(--ok); } .mask { background:var(--warn); } .block { background:var(--bad); } .pending { background:var(--muted); }
+  .muted { color:var(--muted); font-size:13px; }
+  pre { white-space:pre-wrap; word-break:break-word; background:var(--bg); padding:10px; border-radius:6px; font:13px/1.5 ui-monospace, Consolas, monospace; margin:8px 0; }
+  ul { margin:6px 0; padding-left:20px; }
+  .path { font-size:12px; color:var(--muted); }
+  .path span { display:inline-block; border:1px solid var(--line); border-radius:4px; padding:0 6px; margin:2px 4px 2px 0; }
+  .path .decided { border-color:var(--ok); color:var(--ok); }
+  .path .gray { border-color:var(--warn); color:var(--warn); }
+  .path .error { border-color:var(--bad); color:var(--bad); }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  td, th { text-align:left; padding:6px 4px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th, td:not(:first-child) { white-space:nowrap; }
+</style>
+</head>
+<body>
+<header>
+  <h1>office-judge</h1>
+  <span class="cfg" id="cfg">載入設定中…</span>
+</header>
+<main>
+  <textarea id="text" placeholder="貼上一封信、一段訊息或會議記錄"></textarea>
+  <div class="row">
+    <input type="text" id="attendees" placeholder="與會者（逗號分隔，用於待辦負責人）">
+    <button data-sample="ticket">範例：工單</button>
+    <button data-sample="leak">範例：外洩</button>
+    <button data-sample="indirect">範例：間接外洩</button>
+    <button data-sample="meeting">範例：會議</button>
+    <button class="primary" id="go">分析</button>
+  </div>
+  <div class="grid">
+    <section class="card"><h2>機密外洩防護</h2><div id="dlp" class="muted">尚未分析</div></section>
+    <section class="card"><h2>工單分流</h2><div id="ticket" class="muted">尚未分析</div></section>
+    <section class="card"><h2>待辦萃取</h2><div id="actions" class="muted">尚未分析</div></section>
+  </div>
+</main>
+<script>
+const SAMPLES = {
+  ticket: "主旨：VPN 連不上\n從今天早上開始整個業務部都連不上 VPN，outlook 也收不到信，客戶簡報下午就要用，麻煩盡快處理。我的分機 1234。",
+  leak: "幫我把這段整理成英文：北極星專案下一季預計營收 3.2 億，還沒公布前不要外流。宏遠銀行的窗口是王小明，身分證 A123456789，手機 0912-345-678。測試環境的 api_key=sk-proj-abcdefghijklmnopqrstuvwx 記得換掉。",
+  indirect: "跟你說，那個數字比上季少了快兩成，老闆還沒跟董事會講。另外新簽的那家合作方下個月會派人來駐點。對了，明天的教育訓練改到 10 樓。",
+  meeting: "週會記錄\nKevin：上週的客訴已經處理完了。\n怡君：報價單下週三前要寄給客戶，這個請志明處理。\nAmy：我來整理新人訓練教材。\n建宏：也許可以看一下競品的定價。\n大家辛苦了。",
+};
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
+const pct = (x) => x == null ? "–" : (x * 100).toFixed(0) + "%";
+const ACTION = { pass:"放行", mask:"遮罩後放行", block:"擋下" };
+
+function path(trace) {
+  if (!trace || !trace.path) return "";
+  const steps = trace.path.map((s) => {
+    const v = s.probability != null ? "p=" + s.probability.toFixed(2) : s.confidence != null ? "conf=" + s.confidence.toFixed(2) : "";
+    return `<span class="${esc(s.outcome)}">${esc(s.layer)} ${esc(s.outcome)} ${v}</span>`;
+  }).join("→");
+  return `<div class="path">${steps} <b>${esc(trace.status)}</b></div>`;
+}
+
+function renderDlp(r) {
+  let h = `<span class="badge ${r.action}">${ACTION[r.action]}</span> <span class="muted">檢查 ${r.sentences_checked} 句</span>`;
+  if (r.reasons.length) h += `<ul>${r.reasons.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>`;
+  h += `<div class="muted">送出版本</div><pre>${esc(r.masked_text)}</pre>`;
+  if (r.flagged.length) h += `<div class="muted">語意判斷命中</div>` + r.flagged.map((f) => `<div>${esc(f.text)}${path(f.trace)}</div>`).join("");
+  return h;
+}
+
+function renderTicket(r) {
+  if (!r.is_ticket) return `<span class="badge pending">不是工單</span> <span class="muted">不是向服務台提出的請求，略過分流</span>${path(r.trace.is_request)}`;
+  const team = r.team ? `<b>${esc(r.team)}</b> <span class="muted">信心 ${pct(r.team_confidence)}</span>` : `<span class="badge pending">待人工分派</span>`;
+  return `<div>指派：${team}</div>${path(r.trace.team)}
+    <div style="margin-top:8px">急迫度：<b>${esc(r.urgency_label ?? "–")}</b> <span class="muted">${r.urgency != null ? r.urgency.toFixed(2) + " / 3" : ""}</span></div>${path(r.trace.urgency)}`;
+}
+
+function renderActions(r) {
+  if (!r.items.length) return `<span class="muted">沒有找到待辦（檢查 ${r.sentences_checked} 句）</span>`;
+  const rows = r.items.map((a) => `<tr><td>${esc(a.task || a.sentence)}<div class="muted">${a.task ? esc(a.sentence) : ""}</div></td>
+    <td>${esc(a.owner || "未指定")}</td><td>${esc(a.due_date || a.due_text || "–")}</td><td class="muted">${pct(a.probability)}</td></tr>`).join("");
+  return `<table><tr><th>待辦</th><th>負責人</th><th>期限</th><th>P</th></tr>${rows}</table>
+    <div class="muted">${r.postprocessed ? "期限由 LLM 換算" : "未啟用 LLM 後處理，期限未換算"}</div>`;
+}
+
+async function go() {
+  const btn = $("go");
+  btn.disabled = true;
+  ["dlp", "ticket", "actions"].forEach((k) => $(k).innerHTML = '<span class="muted">分析中…</span>');
+  try {
+    const attendees = $("attendees").value.split(/[,，、]/).map((s) => s.trim()).filter(Boolean);
+    const res = await fetch("/api/analyze", { method:"POST", headers:{ "Content-Type":"application/json" },
+      body: JSON.stringify({ text: $("text").value, attendees: attendees.length ? attendees : null }) });
+    if (!res.ok) throw new Error(await res.text());
+    const r = await res.json();
+    $("dlp").innerHTML = renderDlp(r.dlp);
+    $("ticket").innerHTML = renderTicket(r.ticket);
+    $("actions").innerHTML = renderActions(r.actions);
+  } catch (e) {
+    $("dlp").innerHTML = `<span style="color:var(--bad)">${esc(e.message)}</span>`;
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+$("go").onclick = go;
+document.querySelectorAll("[data-sample]").forEach((b) => b.onclick = () => { $("text").value = SAMPLES[b.dataset.sample]; });
+fetch("/api/config").then((r) => r.json()).then((c) => {
+  $("cfg").textContent = `${c.company}｜primary: ${c.primary}｜fallback: ${c.llm ?? "無"}｜writer: ${c.writer ?? "無"}`;
+  $("attendees").value = c.attendees.join(", ");
+  // ?sample=leak&auto=1 fills a sample and runs it (used for screenshots and live demos)
+  const params = new URLSearchParams(location.search);
+  if (SAMPLES[params.get("sample")]) $("text").value = SAMPLES[params.get("sample")];
+  if (params.get("auto") === "1" && $("text").value) go();
+});
+</script>
+</body>
+</html>

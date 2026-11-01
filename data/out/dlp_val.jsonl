@@ -1,0 +1,100 @@
+{"text": "宏遠銀行core系統的DB密碼是 admin_bh2024_secure#，API token放在咱們的config server上", "label": true, "category": "secret", "hard": false}
+{"text": "那個北邊的金融大客戶今年growth沒預期理想，Q3的數字比Q2下滑接近兩成", "label": true, "category": "customer", "hard": true}
+{"text": "東岳航空貨運今年已經繳費突破850萬人民幣，但他們下季度說預算可能會調整", "label": true, "category": "customer", "hard": false}
+{"text": "北極星項目(Polaris)首期簽約金額4200萬，contract裡有retention clause我們沒和leadership discuss", "label": true, "category": "business", "hard": false}
+{"text": "藍鯨計畫的deployment token 被engineer不小心commit到GitHub private repo，我們已經rotate但沒告訴client", "label": true, "category": "secret", "hard": true}
+{"text": "青禾醫療平台上現在存了約140萬患者醫療記錄，stored在自己的dedicated data center裡面", "label": true, "category": "pii", "hard": false}
+{"text": "晨曦項目(Aurora-X)的team member平均月薪已經超預算28%，HR那邊還沒核准這個cost overrun", "label": true, "category": "pii", "hard": true}
+{"text": "Project Bluewhale的Northwind Retail分支連續虧損，單月虧額已經逼近300萬人民幣", "label": true, "category": "customer", "hard": false}
+{"text": "那個新上線的合作方(就是Northwind)他們API call頻率常超過限額，我們默默調大了threshold沒通知他們", "label": true, "category": "customer", "hard": true}
+{"text": "Northwind Retail request的AES-256加密我們目前實現不了，只能provide 128-bit，已經和client說明但文件還沒finalize", "label": true, "category": "secret", "hard": false}
+{"text": "明天下午3點有一個核心小組的weekly sync meeting要開", "label": false, "category": "none", "hard": false}
+{"text": "Can someone review my pull request for the authentication module refactoring?", "label": false, "category": "none", "hard": false}
+{"text": "星河科技在Shanghai、Beijing、Shenzhen、Hangzhou各有辦公室，總員工規模約800人", "label": false, "category": "none", "hard": false}
+{"text": "我們的系統架構是基於horizontal scaling的分散式設計", "label": false, "category": "none", "hard": false}
+{"text": "咱們目前和幾家龍頭科技公司有技術交流合作，這些都是industry內公開的partnership", "label": false, "category": "none", "hard": true}
+{"text": "How to optimize database query performance when dealing with millions of records?", "label": false, "category": "none", "hard": false}
+{"text": "Platform fully complies with GDPR, CCPA, and local data protection regulations", "label": false, "category": "none", "hard": false}
+{"text": "我們的技術棧採用microservices + Kubernetes + Kafka，這些都是public knowledge", "label": false, "category": "none", "hard": true}
+{"text": "HR這個月在actively recruiting大概50個職位的候選人", "label": false, "category": "none", "hard": false}
+{"text": "下週二會進行infrastructure team的quarterly planning session", "label": false, "category": "none", "hard": false}
+{"text": "宏遠銀行那邊的資料庫密碼是 KmXp9#2024!，待會要馬上改掉，別讓其他人看到", "label": true, "category": "secret", "hard": false}
+{"text": "藍鯨計畫上季的數字比預期少快兩成，都是因為主要夥伴交期延誤，這個不能跟外人說", "label": true, "category": "business", "hard": true}
+{"text": "我們報給東岳航空的成本價是新台幣 320 萬，後來成交在 450 萬，中間的利潤空間得留意", "label": true, "category": "business", "hard": true}
+{"text": "客戶聯絡清單：林郁庭 (0923-456789, linyuting@horizon-bank.com.tw)、李家豪 (ljh@eaststar-logistics.com)、陳思宇 (chen.siyu@qinghe-med.com)", "label": true, "category": "pii", "hard": false}
+{"text": "北極星的 API endpoint 密鑰是 sk_live_abc123xyz789def，記得別外流到公開討論區", "label": true, "category": "secret", "hard": false}
+{"text": "那個新合作的物流廠商用舊版協議，我臨時核給他們一組測試金鑰 pk_test_456... 等等我們要更新他們的存取權限", "label": true, "category": "secret", "hard": true}
+{"text": "要是 Northwind 這份新合約簽不下來，公司現金流只能撐到明年 Q1 了，真的有點緊張", "label": true, "category": "business", "hard": true}
+{"text": "晨曦演算法在醫療影像上的精準度達到 92.7%，這超過業界公開的競品數據，是我們的核心競爭力，別隨便提", "label": true, "category": "secret", "hard": true}
+{"text": "Aurora-X 系統裡，青禾醫療的 admin 帳號是 qinghe_sys，臨時密碼是 Medical2024@tmp，他們上週要求開通", "label": true, "category": "secret", "hard": false}
+{"text": "我們購置的醫療訓練資料集有 250 多萬筆匿名病歷，是從 DataVault Inc 買的獨家授權資源，合約裡有保密條款", "label": true, "category": "secret", "hard": true}
+{"text": "最近讀了一篇不錯的論文在講 transformer 層級的優化方案，想在周五 team meeting 分享給大家", "label": false, "category": "none", "hard": false}
+{"text": "咱們公司官網上寫得很清楚，技術棧用的是 Python、Node.js、PostgreSQL 和 Docker，這些都是業界標配", "label": false, "category": "business", "hard": false}
+{"text": "各位有推薦好用的開源中文 NLP tokenizer 嗎？需要支援繁體文本，efficiency 要高一點", "label": false, "category": "none", "hard": false}
+{"text": "咱們公司被 TechCrunch 評為今年度最佳新創 AI 企業，內網新聞牆上有相關文章連結，滿值得一讀的", "label": false, "category": "business", "hard": true}
+{"text": "公司的遠端工作規定和薪酬政策都在員工手冊裡寫得清清楚楚，HR 部門可以提供詳細說明", "label": false, "category": "none", "hard": false}
+{"text": "Project Bluewhale 已經上線快一年了，用戶反饋都很正面，市場評價相當不錯", "label": false, "category": "business", "hard": false}
+{"text": "有人在 PyTorch 用 DistributedDataParallel 時碰過 process synchronization 的問題嗎？求解決方案", "label": false, "category": "none", "hard": false}
+{"text": "我們的服務可用性大概在 99.8% 左右，達到企業級 SLA 標準，官網上有明確標示", "label": false, "category": "business", "hard": true}
+{"text": "統計上看，AI 新創公司的技術成本通常占總支出的 35% 到 45% 之間，這是業界認可的標準範圍", "label": false, "category": "none", "hard": true}
+{"text": "下禮拜的公司 team outing 確定在新竹，詳細行程和報名連結已在公司系統發布，大家可以自己查看", "label": false, "category": "none", "hard": false}
+{"text": "今年和北極星的合作規模確實比去年少了不少，預算被挪到新產線去了。", "label": true, "category": "business", "hard": false}
+{"text": "我們正在為 Bluewhale 實施新的災難恢復協議，伺服器地址是 10.0.5.42，備份頻率設定為每6小時一次。", "label": true, "category": "secret", "hard": true}
+{"text": "東岳航空那邊要求我們在 Q4 前完成系統升級，否則他們會換供應商。", "label": true, "category": "customer", "hard": false}
+{"text": "我們的核心演算法優化讓查詢速度提升了 35%，這是我們相比競爭對手的主要優勢。", "label": false, "category": "business", "hard": true}
+{"text": "DB_USER=galaxia_admin, DB_PASS=Qw3rt7$NmK!xZ 放在了北京機房的 Server-07 上面。", "label": true, "category": "secret", "hard": false}
+{"text": "青禾醫療的訂單額度今年已經突破 4000 萬，他們還在考慮擴展到其他 3 個地區的業務。", "label": true, "category": "customer", "hard": false}
+{"text": "The API key for Northwind's production environment is: sk_live_4c5e9a2b3d8f1g6h, please don't share this in Slack.", "label": true, "category": "secret", "hard": false}
+{"text": "有個同事因為考勤紀錄不佳被降薪 20%，他叫王明軒，工號 12834。", "label": true, "category": "pii", "hard": false}
+{"text": "Aurora-X 的新加坡那邊進展還行，預計下個月能達到第二階段的里程碑。", "label": false, "category": "business", "hard": true}
+{"text": "我們最近和一家大型金融機構在談合作，預計合約規模會超過去年全年營收。", "label": true, "category": "business", "hard": true}
+{"text": "The password for the shared HR portal is Welcome2026! and the database includes all employee salary information linked to their SSNs.", "label": true, "category": "secret", "hard": false}
+{"text": "晨曦的 UI 設計已經基本完成，但後端的那個數據同步問題還在卡我們。", "label": false, "category": "business", "hard": true}
+{"text": "宏遠銀行的 API 整合測試失敗了，他們跑的是舊版本 Java，我們需要回溯相容。", "label": true, "category": "customer", "hard": true}
+{"text": "這季度的利潤率比上季少了將近 18%，主要是因為新的供應商成本比較高。", "label": true, "category": "business", "hard": true}
+{"text": "Our Polaris infrastructure runs on AWS in us-east-1 region, with auto-scaling between 50-200 instances.", "label": false, "category": "business", "hard": false}
+{"text": "黃麗華女士負責宏遠銀行的客戶關係，她的聯絡方式是 0912-345-678，郵箱是 lily.huang@galaxia.internal。", "label": true, "category": "pii", "hard": false}
+{"text": "我們的 Bluewhale 系統在線上成功處理了 100 萬筆交易，超過了同類產品的平均水準。", "label": false, "category": "business", "hard": false}
+{"text": "配置文件裡面有個 API endpoint: https://internal.galaxia.local/v2/azure-sync?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...", "label": true, "category": "secret", "hard": false}
+{"text": "那家新的物流合作方每個月的服務費用是 250 萬，比之前的供應商便宜 40%。", "label": true, "category": "business", "hard": true}
+{"text": "我們在 GitHub 上面有個 repo 叫做 'polaris-internal-tools'，裡面放了一些開發用的腳本和文檔。", "label": true, "category": "secret", "hard": true}
+{"text": "宏遠銀行那個項目按期交付了，客戶對結果很滿意，月底前要上線到他們的正式環境", "label": true, "category": "customer", "hard": false}
+{"text": "Aurora-X 專案因為客戶端基礎設施比預期老舊，額外成本已經逼近 $150K，可能要跟管理層報告", "label": true, "category": "secret", "hard": true}
+{"text": "東岳航空貨運的採購主管李偉銘，聯繫電話 (02)2234-5678，他提到他們今年的 IT 預算有所增加", "label": true, "category": "pii", "hard": false}
+{"text": "Northwind_prod 的數據庫憑證：user=nw_admin, pwd=Nw@2024!Secure#, endpoint=db-prod.northwind.internal", "label": true, "category": "secret", "hard": false}
+{"text": "藍鯨那邊簽下來的金額，呃，目前看起來會比 forecast 少個 35% 左右，趙總要我們重新評估一下", "label": true, "category": "business", "hard": true}
+{"text": "Polaris 專案那邊，customization 的費用 burn 得有點快，原本預算好像有點吃緊的感覺", "label": true, "category": "secret", "hard": true}
+{"text": "客戶 Northwind Retail 表示 7 月流量成長 45%，需要我們協助他們擴容基礎設施", "label": true, "category": "customer", "hard": false}
+{"text": "宏遠銀行聯絡名單：周駿一（總經理）、陳美玲（副理）、王建文（科長），外包顧問黃明信 (02)8760-9876", "label": true, "category": "pii", "hard": false}
+{"text": "聽說藍鯨計畫最近調整了年底目標，新的預測比之前少了大概三成，主要是因為某些客戶那邊的情況", "label": true, "category": "business", "hard": true}
+{"text": "北極星專案目前的 KPI 達成率大約在 60% 左右，可能受到一些外部因素的影響", "label": true, "category": "business", "hard": false}
+{"text": "請問各位，怎樣才能有效處理 10K+ requests per second 的流量？有沒有成功案例分享？", "label": false, "category": "none", "hard": false}
+{"text": "What are typical SLA metrics for large-scale e-commerce API platforms? We're trying to understand industry benchmarks.", "label": false, "category": "none", "hard": false}
+{"text": "想請教一下，金融系統一般要達到 99.99% 以上的 uptime 嗎？還是有其他的標準？", "label": false, "category": "business", "hard": true}
+{"text": "怎樣設計一個 multi-tenant 架構來同時支撐數千個獨立客戶，又能保證 data isolation？", "label": false, "category": "none", "hard": true}
+{"text": "下周團建活動改期了，因為下月要舉辦公司層級的技術大會", "label": false, "category": "none", "hard": false}
+{"text": "Can you explain what zero-trust security model is and under what circumstances companies should consider implementing it?", "label": false, "category": "none", "hard": true}
+{"text": "今年有沒有技術培訓計畫？想報名參加一些關於 cloud-native architecture 的課程", "label": false, "category": "none", "hard": false}
+{"text": "就航空貨運業的特性來看，災難恢復的 RTO 和 RPO 應該設定在什麼水準比較合理？", "label": false, "category": "business", "hard": true}
+{"text": "有誰在生產環境用過 Istio 做 service mesh 嗎？想聽聽你們的實際經驗和踩坑教訓", "label": false, "category": "none", "hard": false}
+{"text": "最近有什麼推薦的微服務架構或分散式系統設計的技術書籍或線上課程嗎？", "label": false, "category": "none", "hard": false}
+{"text": "宏遠銀行新簽合約金額確定是美金850萬，簽約日期預計12月中", "label": true, "category": "customer", "hard": false}
+{"text": "藍鯨計畫最新的monthly revenue比上個月下滑了約19%，這個data不能外洩", "label": true, "category": "business", "hard": true}
+{"text": "東岳航空那邊supply成本從原本的$340降到$185，新的廠商成本控制真的不錯", "label": true, "category": "business", "hard": true}
+{"text": "HR最近approve幾個team member薪資調整，senior engineer level調到L5月薪$62K", "label": true, "category": "pii", "hard": true}
+{"text": "我們正在招聘資深後端工程師和data analyst，有interest的人可以內推", "label": false, "category": "none", "hard": false}
+{"text": "星河科技獲選Forbes「最具創新力100家公司」排名47名，這是公開發布的新聞稿資訊", "label": false, "category": "business", "hard": false}
+{"text": "青禾醫療的case study已在官網published，沒有confidentiality限制，可以free分享", "label": false, "category": "customer", "hard": false}
+{"text": "下週二有quarterly planning會議，各team需提交sprint report和next quarter roadmap", "label": false, "category": "none", "hard": false}
+{"text": "Polaris API production endpoint: api.galaxiatech.cloud/v2/auth, OAuth2 bearer token required", "label": true, "category": "secret", "hard": false}
+{"text": "Northwind Retail's Q4 projection: 2.8M order volume with 26% profit margin, market expansion strategy ongoing", "label": true, "category": "customer", "hard": true}
+{"text": "Production database master password has been rotated to: Gal@xia2024Aurora! (90 days expiry)", "label": true, "category": "secret", "hard": false}
+{"text": "Galaxia Tech announced expansion into Southeast Asia, recruiting 100+ engineers across 5 countries (public announcement)", "label": false, "category": "business", "hard": false}
+{"text": "Can anyone help debug this TypeScript compilation error? Getting module resolution issue in production build", "label": false, "category": "none", "hard": false}
+{"text": "Project Bluewhale current sprint status: 42/50 story points completed, on track for Q1 2027 release target", "label": true, "category": "secret", "hard": true}
+{"text": "宏遠銀行的payment processing gateway integration遇到latency issue，優化方案已提交給client", "label": true, "category": "customer", "hard": true}
+{"text": "Company culture survey results: 87% employee satisfaction, 92% would recommend working here (published in all-hands)", "label": false, "category": "business", "hard": false}
+{"text": "新的那個partner（就是去年跟OEM廠商的deal）今年毛利潤比budget多了快8個百分點，很不錯", "label": true, "category": "business", "hard": true}
+{"text": "Aurora-X implementation guideline已發給所有external stakeholders，confidential restriction已移除per client approval", "label": false, "category": "business", "hard": true}
+{"text": "Who knows good practices for API rate limiting? Need to implement 1000req/min throttling for customer-facing APIs", "label": false, "category": "none", "hard": false}
+{"text": "銷售feedback: 因為pricing差了25%以上，又lose了一個Northwind opportunity，team lead說Q4可能達不到target", "label": true, "category": "business", "hard": true}

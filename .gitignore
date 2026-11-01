@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+*.db
+.pytest_cache/
+data/out/*
+!data/out/dlp_100.jsonl
+!data/out/dlp_val.jsonl
+!data/out/human_labels.csv
+!data/out/bench_dlp.json
+.cache/

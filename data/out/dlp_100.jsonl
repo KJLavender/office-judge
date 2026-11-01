@@ -1,0 +1,100 @@
+{"text": "幫我把這段改得更專業:宏遠銀行下季要把核心系統預算從8000萬砍到5000萬,我們北極星專案可能會被延後。", "label": true, "category": "customer", "hard": false}
+{"text": "請幫我潤飾這封給客戶的信,感謝他們參加上週的產品說明會。", "label": false, "category": "none", "hard": false}
+{"text": "Can you debug this? Our AWS key AKIAIOSFODNN7EXAMPLE and secret wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY keep getting rejected.", "label": true, "category": "secret", "hard": false}
+{"text": "Explain the difference between OAuth 2.0 and OpenID Connect in simple terms.", "label": false, "category": "none", "hard": false}
+{"text": "青禾醫療的病患名單我貼在下面,幫我整理成表格:王美玲 A223456789 0912-345-678;陳志豪 F129876543 0933-222-111。", "label": true, "category": "pii", "hard": false}
+{"text": "幫我寫一份 Python 腳本,批次把 CSV 的日期格式從 YYYY/MM/DD 轉成 ISO 8601。", "label": false, "category": "none", "hard": false}
+{"text": "Summarize this: Project Bluewhale will launch in Q1 2027 with a pricing tier 30% below Northwind Retail's current vendor, and we haven't told anyone outside the core team.", "label": true, "category": "business", "hard": false}
+{"text": "星河科技 Galaxia Tech 的官網上寫我們成立於2012年,總部在台北,幫我根據這些公開資訊寫一段公司簡介。", "label": false, "category": "business", "hard": true}
+{"text": "那個跟東岳那邊談的案子,對方其實只願意付我們報價的七成,下週我要去回他們,幫我想個說法。", "label": true, "category": "customer", "hard": true}
+{"text": "我們 Aurora-X 的 staging DB 連線字串是 postgres://admin:Gx7!pQ2z@10.20.3.15:5432/aurora,幫我看為什麼 timeout。", "label": true, "category": "secret", "hard": false}
+{"text": "Draft an email to the team about moving Friday's standup to 10am because of the holiday schedule.", "label": false, "category": "none", "hard": false}
+{"text": "Help me rewrite this slide: 晨曦 is basically our plan to quietly replace the legacy billing engine before 宏遠 finds out their SLA penalties are going up next year.", "label": true, "category": "business", "hard": true}
+{"text": "幫我解釋一下 GDPR 與台灣個資法在『當事人同意』上有什麼差異?", "label": false, "category": "none", "hard": true}
+{"text": "我同事上個月離職前的薪資條是 82,000 加績效獎金兩個月,幫我算一下他的年薪大概多少,順便比較跟我的差多少。", "label": true, "category": "pii", "hard": true}
+{"text": "Here's the stack trace from prod: NullPointerException at com.galaxia.polaris.ledger.SettlementService.java:214. What usually causes this in Spring Boot?", "label": true, "category": "business", "hard": true}
+{"text": "請推薦幾個適合團隊內部使用的專案管理工具,預算有限。", "label": false, "category": "none", "hard": false}
+{"text": "Northwind Retail 的採購窗口 Jason Lee (jason.lee@northwindretail.example, +1-415-555-0142) 說下週會給我們最終名單,幫我寫跟進信。", "label": true, "category": "customer", "hard": false}
+{"text": "What is a good naming convention for internal code names? E.g. using animals or constellations like Polaris or Aurora.", "label": false, "category": "none", "hard": true}
+{"text": "幫我翻譯成英文:藍鯨計畫的核心演算法我們打算不申請專利,改用營業祕密保護,原始碼只放在內部 repo。", "label": true, "category": "business", "hard": true}
+{"text": "請用輕鬆的語氣幫我寫一則公司內部公告,提醒大家本週五下午有團康活動,地點在大安森林公園。", "label": false, "category": "none", "hard": false}
+{"text": "幫我把這段改得更專業：宏遠銀行這季的授信逾放比上升到2.7%，他們打算下週跟我們討論延後付款。", "label": true, "category": "customer", "hard": false}
+{"text": "Can you suggest a catchy slogan for a company that sells logistics software to air cargo firms?", "label": false, "category": "none", "hard": false}
+{"text": "請幫我寫一封給青禾醫療的信，附上病患陳雅婷（身分證 A223456789）的檢驗報告摘要。", "label": true, "category": "pii", "hard": false}
+{"text": "幫我潤飾這句公開新聞稿：星河科技今天在台北國際資訊展展示最新的雲端監控產品。", "label": false, "category": "none", "hard": false}
+{"text": "這是我們 Polaris 專案的 AWS access key：AKIAIOSFODNN7EXAMPLE，幫我檢查 Terraform 設定哪裡錯了。", "label": true, "category": "secret", "hard": false}
+{"text": "How do I explain to a new hire what a non-disclosure agreement generally means?", "label": false, "category": "none", "hard": false}
+{"text": "藍鯨計畫預計 Q1 先偷跑上線，但對外還是要說 Q2，幫我寫一份內部溝通稿。", "label": true, "category": "business", "hard": false}
+{"text": "幫我整理 Northwind Retail 的 2025 年度採購清單，單價和折扣都在下面表格，我想算出毛利。", "label": true, "category": "customer", "hard": false}
+{"text": "Aurora-X 那個東西下半年我們打算砍掉一半的人力，先別說出去，幫我想想怎麼跟主管開口比較不尷尬。", "label": true, "category": "business", "hard": true}
+{"text": "Please review this SQL: SELECT * FROM users WHERE email='wang.daming@donyue-cargo.com' AND phone='0912-345-678'; 這是東岳航空貨運正式環境查到的資料。", "label": true, "category": "pii", "hard": true}
+{"text": "請問台灣的個資法對於客戶資料外洩，企業需要在多久內通報？", "label": false, "category": "none", "hard": true}
+{"text": "我們 CI 的 token 我貼在下面喔：ghp_x8Kd92LmQp... 你幫我看看 workflow 為什麼 fail，順便 mask 掉就好。", "label": true, "category": "secret", "hard": true}
+{"text": "Write a Python function that validates a Taiwanese national ID format. Use a fake example like A123456789 for the test.", "label": false, "category": "none", "hard": true}
+{"text": "晨曦那個案子，對方報價比我們低三成，所以我們私下決定把底價再降到 480 萬，幫我準備談判話術。", "label": true, "category": "business", "hard": true}
+{"text": "幫我翻譯成英文：Galaxia Tech 是一家成立於台北的軟體公司，提供企業雲端服務。", "label": false, "category": "none", "hard": true}
+{"text": "Summarize this email thread: 宏遠銀行 CTO 說他們內部系統的 VPN 帳密還沒換，hostname 是 vpn-core.hungyuan.internal，要我們先用舊的連。", "label": true, "category": "secret", "hard": true}
+{"text": "Explain the difference between OAuth2 and API keys, with a generic example using placeholder value YOUR_API_KEY.", "label": false, "category": "none", "hard": false}
+{"text": "幫我想一個週五團隊聚餐的地點，大概 12 個人，預算每人 800 元，台北信義區附近。", "label": false, "category": "none", "hard": false}
+{"text": "這份離職員工名單包含薪資、住址和手機，幫我分類成部門別並做成 Excel 格式。", "label": true, "category": "pii", "hard": true}
+{"text": "Draft a polite reply declining a vendor meeting next Tuesday because our team is busy with the release.", "label": false, "category": "none", "hard": true}
+{"text": "幫我把這段改得更專業:藍鯨計畫下季要把宏遠銀行的風控模型報價從480萬調到420萬,先不要讓業務組知道。", "label": true, "category": "business", "hard": false}
+{"text": "請幫我潤飾這封信的語氣,收件人是公司客戶,內容是感謝他們參加上週的產品發表會。", "label": false, "category": "none", "hard": false}
+{"text": "Can you summarize this: Northwind Retail's Q3 churn rate was 14.2% and they're planning to switch vendors in January.", "label": true, "category": "customer", "hard": false}
+{"text": "What's the difference between OAuth 2.0 authorization code flow and implicit flow?", "label": false, "category": "none", "hard": false}
+{"text": "這個 bug 幫我看一下:AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY,為什麼 S3 一直回 403?", "label": true, "category": "secret", "hard": false}
+{"text": "青禾醫療的病患王小明,身分證 A123456789,上週在北區門診做了血糖檢測,幫我整理成報告。", "label": true, "category": "pii", "hard": false}
+{"text": "幫我寫一段 Python 程式,把 CSV 裡的日期欄位從 YYYY/MM/DD 轉成 ISO 8601 格式。", "label": false, "category": "none", "hard": false}
+{"text": "晨曦那個案子其實已經確定停掉了,團隊下個月會整個併進 Aurora-X,你幫我寫個對內說明草稿,公告前先別外流喔。", "label": true, "category": "business", "hard": true}
+{"text": "Draft a LinkedIn post announcing that Galaxia Tech will exhibit at Computex 2026 next month — it's already on our public press page.", "label": false, "category": "business", "hard": true}
+{"text": "我們東岳航空貨運那邊的窗口說,他們明年 Q2 才會編到預算換系統,所以這季先別催,幫我寫追蹤信時語氣放軟一點。", "label": true, "category": "customer", "hard": true}
+{"text": "Help me debug: connecting to db-prod-02.internal.galaxia.local with user svc_polaris / password Tr0ub4dor&3 times out after 30s.", "label": true, "category": "secret", "hard": false}
+{"text": "請解釋一下 GDPR 裡『被遺忘權』的基本概念,以及一般公司要怎麼因應。", "label": false, "category": "none", "hard": true}
+{"text": "幫我排一下下週的會議:週二下午跟 Polaris 團隊 sync,週四要跟宏遠那邊 review 還沒對外的 pricing tier,順便 prep 一下 slides。", "label": true, "category": "business", "hard": true}
+{"text": "星河科技的客服專線是不是 0800-123-456?我想確認官網上的資訊有沒有更新。", "label": false, "category": "none", "hard": true}
+{"text": "Our Bluewhale 的 inference latency 現在 p95 是 380ms,比 competitor 慢,下個 release 要靠還沒公開的 quantization 方案壓到 120ms,幫我寫成 pitch deck 的一頁。", "label": true, "category": "business", "hard": true}
+{"text": "請幫我翻譯成英文:『感謝您的來信,我們將於三個工作天內回覆您的問題。』", "label": false, "category": "none", "hard": false}
+{"text": "客戶清單:陳雅婷 0912-345-678 yating.chen@example.com 台北市信義區松仁路100號,幫我整理成表格並依地區分類。", "label": true, "category": "pii", "hard": false}
+{"text": "What are best practices for naming Git branches in a team of 10 engineers?", "label": false, "category": "none", "hard": false}
+{"text": "這是我們 Aurora-X 的 Stripe live key:sk_live_51HxxEXAMPLE9aBcD,幫我檢查 webhook 簽章驗證的寫法對不對。", "label": true, "category": "secret", "hard": false}
+{"text": "我同事上週離職了,聽說是因為北極星的 headcount 要砍三成,你幫我想想怎麼跟團隊溝通比較不會引起恐慌。", "label": true, "category": "business", "hard": true}
+{"text": "幫我把這段改得更專業:宏遠銀行下季預計把核心帳務系統外包預算從2400萬砍到1500萬,我們要趁機提案。", "label": true, "category": "customer", "hard": false}
+{"text": "請幫我潤飾這封信:藍鯨計畫的上線日期延到明年三月,因為資料庫遷移還沒過測試,先別對外說。", "label": true, "category": "business", "hard": false}
+{"text": "Can you debug this config? AWS_SECRET_ACCESS_KEY=wJalrFAKEexampleKEY0000galaxia and the bucket is galaxia-polaris-prod.", "label": true, "category": "secret", "hard": false}
+{"text": "幫我整理這份名單:青禾醫療的聯絡人陳怡君,手機 0912-345-678,email yichun.chen@qinghe-med.example。", "label": true, "category": "pii", "hard": false}
+{"text": "Summarize this: Northwind Retail told us in the call yesterday they're evaluating a competitor and might not renew the Q1 contract.", "label": true, "category": "customer", "hard": false}
+{"text": "我們晨曦那邊跟東岳那條線,其實底價已經壓到市場的七成,幫我寫個說帖讓對方覺得我們沒有再讓步空間。", "label": true, "category": "business", "hard": true}
+{"text": "幫我看一下這段 code:const token = 'ghp_FAKEtoken1234567890abcdefGalaxia'; 為什麼 push 到 Aurora-X repo 一直 403?", "label": true, "category": "secret", "hard": false}
+{"text": "Our Aurora-X roadmap basically drops the legacy SDK by Q2, and 宏遠 still doesn't know yet — how should I word the sunset notice?", "label": true, "category": "business", "hard": true}
+{"text": "員工資料:王大明,身分證 A123456789,月薪 8.2 萬,請幫我做成表格。", "label": true, "category": "pii", "hard": false}
+{"text": "幫我想想為什麼上週那個客戶的貨運追蹤資料會被我們誤刪,他們量最大的那家航空公司已經發信抱怨兩次了。", "label": true, "category": "customer", "hard": true}
+{"text": "請解釋一下什麼是 OKR,並給我一個適合科技公司的範例。", "label": false, "category": "none", "hard": false}
+{"text": "Write a Python function that validates a Taiwanese national ID format.", "label": false, "category": "none", "hard": false}
+{"text": "幫我翻譯成英文:感謝您今天抽空參加我們的產品說明會,期待後續合作。", "label": false, "category": "none", "hard": false}
+{"text": "星河科技官網公告說我們今年參加了台北 Computex 展,幫我寫一則 LinkedIn 貼文分享心得。", "label": false, "category": "business", "hard": true}
+{"text": "What's the difference between AES-128 and AES-256? Also, how often should teams rotate API keys in general?", "label": false, "category": "secret", "hard": true}
+{"text": "Northwind Retail 的公開年報說他們去年在亞太新增了 40 間門市,幫我整理成三個重點。", "label": false, "category": "customer", "hard": true}
+{"text": "幫我寫一份 sample 的 NDA 條款大綱,用假公司 ABC Corp 和 XYZ Ltd 當例子。", "label": false, "category": "none", "hard": false}
+{"text": "我明天要跟新人介紹專案管理流程,幫我做個 agile sprint 的簡報大綱,不要放任何實際專案名稱。", "label": false, "category": "none", "hard": true}
+{"text": "Give me a regex to mask phone numbers like 0912-345-678 in log files. That's just a made-up example number.", "label": false, "category": "pii", "hard": true}
+{"text": "週五團隊聚餐想找信義區的餐廳,10 個人,預算每人 800 左右,有推薦嗎?", "label": false, "category": "none", "hard": false}
+{"text": "幫我把這段改寫得更專業:宏遠銀行下季要把核心系統遷移的預算從2400萬砍到1500萬,我們藍鯨計畫的人力會被抽掉三個人。", "label": true, "category": "customer", "hard": false}
+{"text": "Can you suggest a catchy title for a blog post about cloud cost optimization best practices?", "label": false, "category": "none", "hard": false}
+{"text": "請幫我debug這段程式:const key = 'AKIAIOSFODNN7EXAMPLE'; const secret = 'wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY'; 為什麼S3一直回403?", "label": true, "category": "secret", "hard": false}
+{"text": "幫我寫一封會議邀請信,主題是下週三的部門午餐聚會,地點在公司附近的義大利餐廳。", "label": false, "category": "none", "hard": false}
+{"text": "青禾醫療的病患名單:王美玲 A223456789 1978/03/12 糖尿病;陳志豪 F129876543 1965/11/02 高血壓。幫我整理成表格。", "label": true, "category": "pii", "hard": false}
+{"text": "星河科技今年在台北資訊月有攤位,我想整理一份公開展覽資訊的摘要,幫我潤飾這段官網上的介紹文字。", "label": false, "category": "business", "hard": true}
+{"text": "Summarize this for the exec deck: Aurora-X launch slipped to Q2 because the Northwind Retail pilot failed the latency SLA, and we haven't told them yet.", "label": true, "category": "business", "hard": true}
+{"text": "我們那個跟海洋哺乳類同名的專案,其實下個月底前就要跟東岳那邊簽新的報價,單價比現行合約低一成五,幫我想想怎麼跟主管說明。", "label": true, "category": "customer", "hard": true}
+{"text": "What's the difference between OAuth 2.0 authorization code flow and implicit flow?", "label": false, "category": "none", "hard": false}
+{"text": "幫我翻譯成英文:北極星專案的原始碼存放在內部 GitLab,管理員帳號 admin_polaris,密碼 Gx!92kLm#2026。", "label": true, "category": "secret", "hard": false}
+{"text": "Here's my coworker's info for the HR form: 林怡君, 0912-345-678, 台北市信義區松仁路100號, 身分證 B221234567. 幫我填進去。", "label": true, "category": "pii", "hard": false}
+{"text": "請解釋什麼是 GDPR,以及公司在處理歐洲客戶資料時一般要注意哪些公開的法規要求。", "label": false, "category": "none", "hard": true}
+{"text": "晨曦那邊的 model weights 我已經 dump 到私人 Google Drive 了,連結給你,幫我寫個 README 說明怎麼 fine-tune。", "label": true, "category": "business", "hard": true}
+{"text": "Write a Python function that validates Taiwanese national ID numbers using the checksum algorithm. Use fake sample IDs for tests.", "label": false, "category": "pii", "hard": true}
+{"text": "幫我把週報整理一下:本週完成 code review 12 件、修了 7 個 bug、參加兩場站會,下週預計開始寫單元測試。", "label": false, "category": "none", "hard": false}
+{"text": "Draft an email to 宏遠銀行 CTO: our Project Bluewhale pen-test found an unpatched SQL injection in their loan portal, endpoint /api/v2/loan/search, still exploitable.", "label": true, "category": "customer", "hard": false}
+{"text": "幫我看看這個 .env 設定有沒有問題:DB_HOST=10.20.3.15 DB_USER=bluewhale_prod DB_PASS=Wh@le#Prod88 JWT_SECRET=9f8a7c6d5e4b3a2f", "label": true, "category": "secret", "hard": false}
+{"text": "Northwind Retail is a well-known retailer; help me write a generic cold-email template for approaching retail companies about inventory analytics.", "label": false, "category": "customer", "hard": true}
+{"text": "下個月董事會前,內部決定把 Aurora-X 授權給一家還沒公布的日本合作夥伴,幫我寫三句話的簡報重點,語氣不要太確定。", "label": true, "category": "business", "hard": true}
+{"text": "請推薦幾個適合團隊讀書會的技術書籍,主題偏向軟體架構與分散式系統。", "label": false, "category": "none", "hard": false}
