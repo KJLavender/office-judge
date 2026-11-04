@@ -9,3 +9,12 @@ data/out/*
 !data/out/human_labels.csv
 !data/out/bench_dlp.json
 .cache/
+
+# planning notes stay local
+PLAN.md
+PLANS.md
+plan.md
+*-plan.md
+*_plan.md
+plans/
+00-shared-core.md
