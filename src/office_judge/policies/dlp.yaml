@@ -10,7 +10,9 @@ criteria:
 thresholds: { yes_above: 0.5, no_below: 0.05 }
 model_thresholds:
   # tuned on data/out/dlp_100.jsonl, validated on data/out/dlp_val.jsonl (2026-10-30):
-  # rules -> kev-4b -> LLM missed 0 leaks, 28% of sentences went to the LLM
+  # rules -> kev-4b -> LLM missed 0 leaks. Share of sentences sent to the LLM:
+  # 28% in the per-sentence simulation (scripts/validate_dlp.py), 42% end to end
+  # through oj.dlp() (scripts/validate_pipeline.py: whole message as state, masked first)
   kev-4b: { yes_above: 0.5, no_below: 0.15 }
   # Claude via the CLI: no_below 0.2 auto-passed 0 leaks on both data sets
   "llm:": { yes_above: 0.5, no_below: 0.2 }
